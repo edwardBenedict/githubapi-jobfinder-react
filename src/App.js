@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./App.css";
 import axios from "axios";
 import JobCard from "./components/JobCard";
+import Form from "./components/Form";
+import Header from "./components/Header";
 
 function App() {
   const [info, setInfo] = useState({ description: "", location: "" });
@@ -21,31 +23,16 @@ function App() {
       });
   };
 
-  const getJobs = () => {
+  const getJobs = (e) => {
+    e.preventDefault();
     console.log(info);
     getInfo();
   };
 
   return (
     <div className="App">
-      <h1>Github Jobs</h1>
-      <input
-        type="text"
-        onChange={(e) => {
-          setInfo({ ...info, description: e.target.value });
-        }}
-        value={info.description}
-        placeholder="Description"
-      />
-      <input
-        type="text"
-        onChange={(e) => {
-          setInfo({ ...info, location: e.target.value });
-        }}
-        value={info.location}
-        placeholder="Location"
-      />
-      <button onClick={getJobs}>Search</button>
+      <Header />
+      <Form setInfo={setInfo} info={info} getJobs={getJobs} />
       {jobs?.map((job, index) => (
         <JobCard
           key={index}

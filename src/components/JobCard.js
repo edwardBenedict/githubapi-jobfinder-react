@@ -1,4 +1,5 @@
 import React from "react";
+import { Card, Button } from "react-bootstrap";
 
 const JobCard = ({
   company,
@@ -10,36 +11,49 @@ const JobCard = ({
 }) => {
   return (
     <div
-      style={{ border: "1px solid grey", margin: "10px", borderRadius: "4px" }}
+      style={{
+        border: "1px solid #28A745",
+        margin: "10px",
+        borderRadius: "4px",
+        backgroundColor: "white",
+      }}
     >
       <img
         src={company_logo}
         alt=""
-        style={{ height: "50px", marginTop: "10px" }}
+        style={{ height: "75px", margin: "10px" }}
       />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-evenly",
-          alignItems: "center",
-        }}
-      >
-        <h3>{company}</h3>
-        <h3>{title}</h3>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-evenly",
-          alignItems: "center",
-        }}
-      >
-        <a href={company_url} target="_blank" rel="noreferrer">
-          Apply
-        </a>
-        <h3> {type}</h3>
-        <h3> {location}</h3>
-      </div>
+      <Card border="success" style={{ width: "50rem" }}>
+        <Card.Header style={{ backgroundColor: "grey", color: "white" }}>
+          {title}
+        </Card.Header>
+        <Card.Body>
+          <Card.Title>
+            {company}- {location}
+          </Card.Title>
+          <p>{type}</p>
+          <Card.Text>
+            <Button
+              variant="success"
+              style={{
+                color: "white",
+                width: "20rem",
+              }}
+            >
+              <a
+                href={company_url}
+                target="_blank"
+                rel="noreferrer"
+                style={{
+                  color: "white",
+                }}
+              >
+                Apply
+              </a>
+            </Button>
+          </Card.Text>
+        </Card.Body>
+      </Card>
     </div>
   );
 };
