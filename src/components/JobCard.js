@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 const JobCard = ({
   company,
@@ -32,26 +32,31 @@ const JobCard = ({
             {company}- {location}
           </Card.Title>
           <p>{type}</p>
-          <Card.Text>
-            <Button
-              variant="success"
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              height: "100%",
+              alignItems: "center",
+            }}
+          >
+            <a
+              href={company_url}
+              target="_blank"
+              rel="noreferrer"
               style={{
                 color: "white",
-                width: "20rem",
+                display: "block",
+                width: "300px",
+                backgroundColor: "#28A745",
+                borderRadius: "5px",
+                height: "2rem",
+                fontSize: "1.2rem",
               }}
             >
-              <a
-                href={company_url}
-                target="_blank"
-                rel="noreferrer"
-                style={{
-                  color: "white",
-                }}
-              >
-                Apply
-              </a>
-            </Button>
-          </Card.Text>
+              Apply
+            </a>
+          </div>
         </Card.Body>
       </Card>
     </div>

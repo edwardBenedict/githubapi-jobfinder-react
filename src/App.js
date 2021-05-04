@@ -6,6 +6,7 @@ import Form from "./components/Form";
 import Header from "./components/Header";
 import fof from "./assets/404.png";
 import loadingGif from "./assets/loading.gif";
+import Footer from "./components/Footer";
 
 function App() {
   const [info, setInfo] = useState({ description: "", location: "" });
@@ -56,6 +57,7 @@ function App() {
           />
         ))
       )}
+      <Footer />
     </div>
   );
 }
