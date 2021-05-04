@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+import designSvg from "../../assets/design.svg";
 
 const Footer = () => {
   return (
@@ -12,6 +13,11 @@ const Footer = () => {
       >
         <code className="brand">{"<ed8en/> "}</code>
       </a>
+      <img
+        src={designSvg}
+        alt="design"
+        style={{ width: "40px", margin: "0  25px 0 10px" }}
+      />
       <span>design</span>
     </div>
   );
