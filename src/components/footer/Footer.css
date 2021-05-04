@@ -1,5 +1,6 @@
 .footer-div {
   width: 80vw;
+  min-width: 250px;
   background-color: White;
   height: 50px;
   font-size: 2rem;
