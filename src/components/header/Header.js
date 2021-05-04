@@ -8,7 +8,7 @@ const Header = () => {
     <div>
       <div className="header-div">
         <img src={octocat} className="header-img" alt="job" />
-        <img src={jobLogo} className="header-img" alt="job" />
+        <img src={jobLogo} className="header-img job-img" alt="job" />
       </div>
       <h1 className="header-title">Github Job Finder</h1>
     </div>

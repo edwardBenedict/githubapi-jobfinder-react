@@ -11,3 +11,13 @@
 .header-title {
   color: #00438c;
 }
+
+@media screen and (max-width: 600px) {
+  .job-img {
+    background-color: red;
+    display: none;
+  }
+  .header-img {
+    margin-left: 20px;
+  }
+}
