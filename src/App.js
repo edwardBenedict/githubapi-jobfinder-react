@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import "./App.css";
 import axios from "axios";
-import JobCard from "./components/JobCard";
-import Form from "./components/Form";
-import Header from "./components/Header";
+import JobCard from "./components/jobCard/JobCard";
+import Form from "./components/form/Form";
+import Header from "./components/header/Header";
 import fof from "./assets/404.png";
 import loadingGif from "./assets/loading.gif";
-import Footer from "./components/Footer";
+import Footer from "./components/footer/Footer";
 
 function App() {
   const [info, setInfo] = useState({ description: "", location: "" });
@@ -41,9 +41,9 @@ function App() {
       <Header />
       <Form setInfo={setInfo} info={info} getJobs={getJobs} />
       {isLoading ? (
-        <img src={loadingGif} style={{ width: "100px" }} alt="404" />
+        <img className="loading-404" src={loadingGif} alt="loading" />
       ) : jobs?.length === 0 ? (
-        <img src={fof} style={{ width: "500px" }} alt="404" />
+        <img className="loading-404" src={fof} alt="404" />
       ) : (
         jobs?.map((job, index) => (
           <JobCard

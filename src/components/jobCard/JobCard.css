@@ -1,0 +1,43 @@
+.card-wrapper {
+  border: 1px solid #28a745;
+  margin: 10px;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.comp-logo {
+  height: 75px;
+  margin: 10px;
+}
+.card {
+  width: 50rem;
+}
+
+.card-header {
+  color: #dc3545;
+  font-size: 2rem;
+}
+
+.a-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-items: center;
+  cursor: pointer;
+}
+
+.apply {
+  color: white;
+  display: block;
+  width: 300px;
+  background-color: #28a745;
+  border-radius: 5px;
+  height: 2rem;
+  font-size: 1.2rem;
+}
+
+.apply:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #218838;
+}

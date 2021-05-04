@@ -1,0 +1,13 @@
+.header-div {
+  display: flex;
+  align-items: center;
+  margin: 25px;
+}
+
+.header-img {
+  width: 200px;
+}
+
+.header-title {
+  color: #00438c;
+}
